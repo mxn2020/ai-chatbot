@@ -1,63 +1,94 @@
-# AI Chatbot (Website / WhatsApp / Telegram)
+# AI Chatbot
 
-## Pages & Features
+Multi-platform AI chatbot for Website, WhatsApp, and Telegram.
 
-### 1. Dashboard
-- Active conversations count & response time metrics
-- Customer satisfaction score (CSAT) overview
-- Escalation rate & resolution stats
-- Message volume chart (hourly / daily / weekly)
+Part of [The Mehdi Verse](https://github.com/mxn2020) — a collection of open-source sample applications.
 
-### 2. Conversation Inbox
-- Real-time chat feed across all channels
-- Filter by channel (Website, WhatsApp, Telegram)
-- Search conversations by keyword, customer, or date
-- Assign / transfer conversations to human agents
-- Conversation status (open, pending, resolved)
+## Tech Stack
 
-### 3. Bot Builder
-- Visual flow editor (drag-and-drop conversation paths)
-- Intent & entity configuration
-- Quick-reply buttons & carousel cards
-- Conditional branching logic
-- Fallback & error handling flows
-- Test chat preview
+- **Frontend**: React 19 + TypeScript + Vite
+- **Backend**: [Shared Convex deployment](https://github.com/mxn2020/the-mehdi-verse-convex-backend)
+- **Auth**: Email/password via `@convex-dev/auth`
 
-### 4. Knowledge Base
-- Add FAQs & articles for bot training
-- Categorize content by topic
-- Auto-suggest answers from knowledge base
-- Import content from CSV / URL
+## Getting Started
 
-### 5. AI Training
-- Review unmatched user queries
-- Approve / correct AI responses
-- Fine-tune intent recognition
-- Confidence threshold settings
-- Training history & accuracy metrics
+```bash
+npm install
+cp .env.example .env.local
+# Set VITE_CONVEX_URL to your deployment URL
+npm run dev
+```
 
-### 6. Channel Management
-- Connect Website widget (embed code)
-- WhatsApp Business API integration
-- Telegram Bot Token setup
-- Channel-specific greeting & behavior settings
+## License
 
-### 7. Human Handoff
-- Escalation rules (keyword, sentiment, confidence)
-- Agent availability & routing
-- Seamless handoff with conversation context
-- Notification alerts for agents
+MIT © Mehdi Nabhani
 
-### 8. Analytics & Reports
-- Response time & resolution metrics
-- Top intents & frequently asked questions
-- Customer satisfaction trends
-- Channel performance comparison
-- Export reports as PDF / CSV
+---
 
-### 9. Settings
-- Bot persona (name, avatar, tone)
-- Business hours & auto-reply messages
-- Language & localization
-- User roles & permissions
-- Webhook & API configuration
+<details>
+<summary>📋 Original Feature Spec</summary>
+
+# {{APP_TITLE}}
+
+{{APP_DESCRIPTION}}
+
+Part of [The Mehdi Verse](https://github.com/mxn2020) — a collection of open-source sample applications.
+
+## Tech Stack
+
+- **Frontend**: React 19 + TypeScript + Vite
+- **Backend**: [Shared Convex deployment](https://github.com/mxn2020/the-mehdi-verse-convex-backend)
+- **Auth**: Email/password via `@convex-dev/auth`
+
+## Getting Started
+
+### Prerequisites
+
+- Node.js 22+
+- A running [shared Convex backend](https://github.com/mxn2020/the-mehdi-verse-convex-backend)
+
+### Setup
+
+```bash
+# Install dependencies
+npm install
+
+# Create .env.local with your Convex URL
+cp .env.example .env.local
+# Edit .env.local and set VITE_CONVEX_URL to your deployment URL
+
+# Start the dev server
+npm run dev
+```
+
+Open [http://localhost:5173](http://localhost:5173) to view the app.
+
+## Scripts
+
+| Command | Description |
+|---------|-------------|
+| `npm run dev` | Start Vite dev server |
+| `npm run build` | Build for production |
+| `npm run preview` | Preview production build |
+| `npm run typecheck` | Run TypeScript type checking |
+
+## Project Structure
+
+```
+src/
+  main.tsx              # Entry point with ConvexAuthProvider
+  App.tsx               # Auth routing (Landing vs Dashboard)
+  App.css               # Component styles
+  index.css             # Global styles & design tokens
+  components/
+    Landing.tsx          # Marketing/landing page
+    SignIn.tsx           # Auth form (sign-in/sign-up)
+    Dashboard.tsx        # Authenticated app shell
+api.ts                   # Convex API types (from shared backend)
+```
+
+## License
+
+MIT © Mehdi Nabhani
+
+</details>
